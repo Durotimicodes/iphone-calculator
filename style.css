@@ -1,0 +1,129 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-size: 60.5%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(165, 165, 165);
+}
+
+/* VARIABLE DECLARATION */
+:root {
+  --Cal-Operation: rgb(255, 167, 2);
+  --Cal-Numbers: rgb(59, 59, 59);
+  --Cal-specialOpertors: rgb(165, 165, 165);
+  --Main-body: #000;
+  --Main-fontColor: #fff;
+  --Sec-fontColor: #000;
+}
+
+#cal-container {
+  background-color: var(--Main-body);
+  width: 35rem;
+  height: 580px;
+  color: var(--Main-fontColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50px;
+}
+
+/* screen design */
+.screen-1,
+.screen-2 {
+  width: 29.5rem;
+  height: 6rem;
+  font-size: 55px;
+  background-color: #000;
+  color: var(--Main-fontColor);
+  text-align: right;
+  size: 9;
+}
+.screen-1 {
+  font-size: 35px;
+}
+
+/* body design */
+.digits-case {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 65px 65px 65px 65px;
+  grid-template-rows: 65px 65px 65px 65px 65px;
+  grid-gap: 10px 10px;
+  justify-content: center;
+}
+.btn {
+  background-color: grey;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translate(3px, 3px);
+  transition: 0.2s ease-in-out;
+}
+span {
+  font-size: 32px;
+  position: relative;
+  top: 15px;
+}
+
+.operator {
+  background-color: var(--Cal-Operation);
+}
+
+.number,
+.dot {
+  background-color: var(--Cal-Numbers);
+}
+
+.numbers {
+  background-color: var(--Cal-Numbers);
+  cursor: pointer;
+}
+
+.numbers:active {
+  transform: translate(3px, 3px);
+  transition: 0.2s ease-in-out;
+}
+
+.special {
+  background-color: var(--Cal-specialOpertors);
+  color: var(--Sec-fontColor);
+}
+
+.zero {
+  padding-left: 20px;
+  position: relative;
+  top: 20px;
+  grid-column: 1/3;
+  border-radius: 40px;
+}
+
+.minus-sign,
+.plus-sign {
+  font-size: 20px;
+  position: relative;
+  top: -5px;
+  font-weight: bold;
+}
+
+.slash {
+  font-size: 30px;
+  font-weight: bold;
+}
